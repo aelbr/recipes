@@ -3,23 +3,23 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Recipes
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: 
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://aelbr.github.io
 root: /
 permalink: /p/:abbrlink/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -70,6 +70,12 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+# Inside the Ayer configuration section
+article_info:
+  enable: false    # This hides date, views, and word count icons
+  
+excerpt_all: false # Prevents the theme from pulling text automatically
+
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
@@ -103,3 +109,4 @@ theme: ayer
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
