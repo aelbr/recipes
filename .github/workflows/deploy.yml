@@ -18,8 +18,6 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-run: pnpm install --no-frozen-lockfile
-
 jobs:
   # Build job
   build:
@@ -40,8 +38,8 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm i # or pnpm install / yarn install / bun install
-
+        run: pnpm install --no-frozen-lockfile
+        
       - name: Build
         run: |
           pnpm build
