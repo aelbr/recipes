@@ -141,9 +141,3 @@ music:
   type: 1 # 1: CloudMusic, 2: Meting
   id: 
   server: netease
-
-# Inside the Ayer configuration section
-article_info:
-  enable: false    # This hides date, views, and word count icons
-  
-excerpt_all: false # Prevents the theme from pulling text automatically
