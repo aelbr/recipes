@@ -30,7 +30,7 @@
 
 
 .article-meta
-  clearfix()
+  display none !important
 
 .article-date
   @extend $block-caption
@@ -41,57 +41,14 @@
     opacity .5
 
 .article-category
-  display inline-block
-  margin-left 1.5rem
-  &:before
-    content "\efde"
-    font-family remixicon
-    margin-right .15rem
-    opacity 0.6
-  .article-category-link
-    @extend $block-caption
+  display none !important
 
 .archive-article-header
   + .article-category
     margin-left 0
 
 .article-entry
-  font-size 103%
-  margin-top .5rem
-  line-height 1.6
-  clearfix()
-  @extend $base-style
-  color body-color
-  .pullquote
-    text-align left
-    width 45%
-    margin 0
-    &.left
-      margin-left 0.5em
-      margin-right 1em
-    &.right
-      margin-right 0.5em
-      margin-left 1em
-  .caption
-    color froth
-    display block
-    font-size 0.9em
-    margin-top 0.5em
-    position relative
-    text-align center
-  // http://webdesignerwall.com/tutorials/css-elastic-videos
-  .video-container
-    position relative
-    padding-top (9 / 16 * 100) % // 16:9 ratio
-    height 0
-    overflow hidden
-    iframe, object, embed
-      position absolute
-      top 0
-      left 0
-      width 100%
-      height 100%
-      margin-top 0
+  display none !important
 
 .article-header
   position relative
@@ -115,7 +72,7 @@
     padding-left 2rem
 
 .article-footer
-  clearfix()
+  display none !important
 
 .declare
   margin 0 0 1rem
@@ -274,3 +231,27 @@ $article-share-link
 @import "gallery"
 @import "albums"
 @import "justifiedGallery"
+
+// 1. Hide the metadata (Date, Category, Comments, Share)
+.article-meta, 
+.article-date, 
+.article-category, 
+.article-footer,
+.article-comment-link,
+.article-share-link {
+  display: none !important;
+}
+
+// 2. Hide the actual article content/preview
+.article-entry {
+  display: none !important;
+}
+
+// 3. Optional: Adjust the Title spacing
+// Since we removed the metadata, we can tighten the layout
+.article-header {
+  border-bottom: none;
+  .article-title {
+    margin-bottom: 1rem; // Reduced from 3rem since nothing is below it
+  }
+}
