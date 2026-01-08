@@ -15,8 +15,7 @@ timezone: ''
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://aelbr.github.io/recipes
 root: /
-permalink: /p/:abbrlink/
-permalink_defaults:
+permalink: :year/:month/:day/:title/
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: false # Set to false to remove trailing '.html' from permalinks
@@ -71,10 +70,10 @@ category_map:
 tag_map:
 
 # Inside the Ayer configuration section
-#article_info:
-#  enable: false    # This hides date, views, and word count icons
+article_info:
+  enable: false    # This hides date, views, and word count icons
   
-#excerpt_all: false # Prevents the theme from pulling text automatically
+excerpt_all: false # Prevents the theme from pulling text automatically
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
@@ -99,6 +98,13 @@ pagination_dir: page
 include:
 exclude:
 ignore:
+
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+  url: true
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
