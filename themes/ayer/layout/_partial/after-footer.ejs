@@ -1,6 +1,6 @@
-<%- js('/js/jquery-3.6.0.min') %> <%- js('/js/lazyload.min') %>
+<%- js('/js/jquery-3.6.0.min') %> <%- js('js/lazyload.min') %>
 <!-- Tocbot -->
-<% if (theme.toc && is_post() && !page.no_toc){ %> <%- js('/js/tocbot.min') %>
+<% if (theme.toc && is_post() && !page.no_toc){ %> <%- js('js/tocbot.min') %>
 <script>
   tocbot.init({
     tocSelector: ".tocbot",
@@ -36,20 +36,20 @@
 <% if (theme.katex.enable){ %> <%- partial('katex') %> <% } %>
 <!-- busuanzi  -->
 <% if (theme.busuanzi && theme.busuanzi.enable){ %> <%-
-js('/js/busuanzi-2.3.pure.min') %> <% } %>
+js('js/busuanzi-2.3.pure.min') %> <% } %>
 <!-- ClickLove -->
-<% if (theme.click_effect===1){ %> <%- js('/js/clickLove') %> <% } %>
+<% if (theme.click_effect===1){ %> <%- js('js/clickLove') %> <% } %>
 <!-- ClickBoom1 -->
 <% if (theme.click_effect===2){ %>
 <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
-<%- js('/js/clickBoom1') %> <% } %>
+<%- js('js/clickBoom1') %> <% } %>
 <!-- ClickBoom2 -->
-<% if (theme.click_effect===3){ %> <%- js('/js/clickBoom2') %> <% } %>
+<% if (theme.click_effect===3){ %> <%- js('js/clickBoom2') %> <% } %>
 <!-- CodeCopy -->
-<% if (theme.copy_btn == true) { %> <%- css('/css/clipboard') %> <%-
+<% if (theme.copy_btn == true) { %> <%- css('css/clipboard') %> <%-
 partial('post/clipboard') %> <% } %>
 <!-- CanvasBackground -->
-<% if (theme.canvas_bg == 1) { %> <%- js('/js/dz') %> <% } %>
+<% if (theme.canvas_bg == 1) { %> <%- js('js/dz') %> <% } %>
 <script>
   if (window.mermaid) {
     mermaid.initialize({ theme: "<%= theme.mermaid.theme %>" });
