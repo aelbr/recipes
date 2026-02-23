@@ -71,6 +71,7 @@ copyright_type: 0
 # Search
 # https://github.com/theme-next/hexo-generator-searchdb
 search: true
+search_path: search.xml
 
 # RSS
 # leave it empty if you dont' need
