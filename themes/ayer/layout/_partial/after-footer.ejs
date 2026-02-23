@@ -22,6 +22,20 @@
 />
 <script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <%- js('dist/main') %>
+
+<% if (theme.search){ %>
+  <%- js('js/search') %>
+  <script>
+    var searchPath = "<%= config.search.path %>";
+    if (searchPath.length == 0) {
+      searchPath = "search.xml";
+    }
+    // This part handles the /recipes/ subdirectory automatically
+    var path = "<%= config.root %>" + searchPath;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+  </script>
+<% } %>
+
 <!-- ImageViewer -->
 <% if (theme.image_viewer){ %> <%- partial('viewer') %> <% } %>
 <!-- MathJax -->
