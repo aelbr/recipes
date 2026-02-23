@@ -117,7 +117,7 @@ google_analytics: ""
 baidu_analytics: ""
 
 # Mathjax Support
-mathjax: true
+mathjax: false
 
 # Katex Support
 # note: need change the hexo-renderer，npm un hexo-renderer-marked -S && npm i hexo-renderer-markdown-it-katex -S
