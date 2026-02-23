@@ -1,7 +1,7 @@
 # Menu-Sidebar
 menu:
-  all: /
-  tags: /tags
+  all: all
+  tags: tags
 
 # Subtitle and Typing animation
 # https://github.com/mattboldt/typed.js
